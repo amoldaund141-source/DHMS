@@ -1,0 +1,169 @@
+{
+  "app": {
+    "name": "जिला स्वास्थ्य निगरानी प्रणाली",
+    "shortName": "DHMS",
+    "tagline": "जिले भर के स्वास्थ्य केंद्रों का रीयल-टाइम प्रबंधन"
+  },
+  "nav": {
+    "overview":       "अवलोकन",
+    "hospitals":      "अस्पताल",
+    "compare":        "तुलना करें",
+    "attendance":     "उपस्थिति",
+    "appointments":   "अपॉइंटमेंट",
+    "stock":          "स्टॉक",
+    "nearbyHospitals":"नज़दीकी अस्पताल",
+    "myAppointments": "मेरी अपॉइंटमेंट",
+    "notifications":  "सूचनाएँ",
+    "profile":        "प्रोफ़ाइल और सेटिंग",
+    "logout":         "लॉग आउट"
+  },
+  "auth": {
+    "login":           "लॉग इन",
+    "logout":          "लॉग आउट",
+    "register":        "पंजीकरण",
+    "email":           "ईमेल पता",
+    "password":        "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "fullName":        "पूरा नाम",
+    "phone":           "फ़ोन नंबर",
+    "location":        "स्थान / निकटतम ज़िला",
+    "loginCta":        "अपने खाते में साइन इन करें",
+    "registerCta":     "रोगी खाता बनाएं",
+    "noAccount":       "खाता नहीं है?",
+    "haveAccount":     "पहले से खाता है?",
+    "forgotPassword":  "पासवर्ड भूल गए?"
+  },
+  "dashboard": {
+    "districtOverview":  "जिला अवलोकन",
+    "totalHospitals":    "कुल सुविधाएं",
+    "avgStockHealth":    "औसत स्टॉक स्वास्थ्य",
+    "avgBedOccupancy":   "औसत बेड अधिभोग",
+    "doctorsPresent":    "आज उपस्थित डॉक्टर",
+    "lastUpdated":       "अंतिम अपडेट",
+    "liveData":          "लाइव डेटा",
+    "aiInsights":        "AI अंतर्दृष्टि",
+    "aiInsightsDesc":    "जिले के स्वास्थ्य केंद्र प्रदर्शन का AI-जनित विश्लेषण",
+    "filterAll":         "सभी",
+    "filterUrban":       "शहरी",
+    "filterRural":       "ग्रामीण",
+    "filterPHC":         "PHC",
+    "filterCHC":         "CHC",
+    "filterUnderperforming": "कम प्रदर्शन",
+    "filterCritical":    "गंभीर",
+    "mapView":           "मानचित्र दृश्य",
+    "listView":          "सूची दृश्य"
+  },
+  "status": {
+    "available":    "उपलब्ध",
+    "warning":      "कम",
+    "critical":     "गंभीर",
+    "present":      "उपस्थित",
+    "absent":       "अनुपस्थित",
+    "operational":  "चालू",
+    "unavailable":  "अनुपलब्ध"
+  },
+  "beds": {
+    "title":        "बेड अधिभोग",
+    "general":      "सामान्य वार्ड",
+    "semiWard":     "अर्ध वार्ड",
+    "special":      "विशेष वार्ड",
+    "occupied":     "भरे हुए",
+    "total":        "कुल",
+    "available":    "उपलब्ध"
+  },
+  "stock": {
+    "title":       "दवा स्टॉक",
+    "medicine":    "दवा",
+    "current":     "वर्तमान",
+    "ordered":     "ऑर्डर किया",
+    "dispensed":   "वितरित",
+    "threshold":   "सीमा",
+    "trend":       "प्रवृत्ति",
+    "lowStock":    "कम स्टॉक आइटम",
+    "addStock":    "स्टॉक जोड़ें",
+    "updateStock": "स्टॉक अपडेट करें"
+  },
+  "appointments": {
+    "title":            "अपॉइंटमेंट",
+    "bookAppointment":  "अपॉइंटमेंट बुक करें",
+    "book":             "अपॉइंटमेंट बुक करें",
+    "upcoming":         "आगामी",
+    "past":             "पिछली",
+    "date":             "तारीख",
+    "time":             "समय",
+    "doctor":           "डॉक्टर",
+    "hospital":         "अस्पताल",
+    "status":           "स्थिति",
+    "confirmed":        "पुष्टि",
+    "cancelled":        "रद्द",
+    "completed":        "पूरी",
+    "selectHospital":   "अस्पताल चुनें",
+    "selectDoctor":     "डॉक्टर चुनें",
+    "selectSlot":       "समय स्लॉट चुनें",
+    "confirm":          "बुकिंग की पुष्टि करें"
+  },
+  "attendance": {
+    "title":       "डॉक्टर उपस्थिति",
+    "markPresent": "उपस्थित दर्ज करें",
+    "markAbsent":  "अनुपस्थित दर्ज करें",
+    "today":       "आज",
+    "history":     "इतिहास"
+  },
+  "patient": {
+    "nearbyHospitals": "आपके नज़दीक अस्पताल",
+    "distance":        "दूरी",
+    "bedsAvailable":   "बेड उपलब्ध",
+    "noBeds":          "कोई बेड उपलब्ध नहीं",
+    "viewDetails":     "विवरण देखें"
+  },
+  "profile": {
+    "title":          "प्रोफ़ाइल और सेटिंग",
+    "editProfile":    "प्रोफ़ाइल संपादित करें",
+    "changePassword": "पासवर्ड बदलें",
+    "language":       "भाषा",
+    "saveChanges":    "परिवर्तन सहेजें"
+  },
+  "notifications": {
+    "title":    "सूचनाएँ",
+    "markRead": "पढ़ा हुआ चिह्नित करें",
+    "markAll":  "सभी पढ़ा हुआ",
+    "noNew":    "कोई नई सूचना नहीं",
+    "types": {
+      "lowStock":            "कम स्टॉक अलर्ट",
+      "bedFull":             "बेड भरे हुए",
+      "doctorAbsent":        "डॉक्टर अनुपस्थित",
+      "appointmentReminder": "अपॉइंटमेंट अनुस्मारक"
+    }
+  },
+  "errors": {
+    "notFound":        "पृष्ठ नहीं मिला",
+    "notFoundDesc":    "आप जिस पृष्ठ की तलाश कर रहे हैं वह मौजूद नहीं है।",
+    "offline":         "सर्वर से संपर्क नहीं हो सका",
+    "offlineDesc":     "अपना कनेक्शन जांचें या सिस्टम व्यवस्थापक से संपर्क करें।",
+    "backToDashboard": "डैशबोर्ड पर वापस जाएं",
+    "retry":           "पुनः प्रयास करें",
+    "noData":          "कोई डेटा उपलब्ध नहीं",
+    "noDataDesc":      "यहाँ अभी तक कुछ नहीं है।"
+  },
+  "common": {
+    "loading":   "लोड हो रहा है…",
+    "search":    "खोजें",
+    "filter":    "फ़िल्टर",
+    "sort":      "क्रमबद्ध करें",
+    "export":    "निर्यात करें",
+    "cancel":    "रद्द करें",
+    "save":      "सहेजें",
+    "edit":      "संपादित करें",
+    "delete":    "हटाएं",
+    "view":      "देखें",
+    "back":      "वापस",
+    "next":      "अगला",
+    "previous":  "पिछला",
+    "submit":    "सबमिट करें",
+    "close":     "बंद करें",
+    "of":        "में से",
+    "all":       "सभी",
+    "today":     "आज",
+    "yesterday": "कल"
+  }
+}

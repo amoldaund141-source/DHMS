@@ -1,0 +1,169 @@
+{
+  "app": {
+    "name": "District Health Monitoring System",
+    "shortName": "DHMS",
+    "tagline": "Real-time health centre management across your district"
+  },
+  "nav": {
+    "overview":      "Overview",
+    "hospitals":     "Hospitals",
+    "compare":       "Compare",
+    "attendance":    "Attendance",
+    "appointments":  "Appointments",
+    "stock":         "Stock",
+    "nearbyHospitals":"Nearby Hospitals",
+    "myAppointments": "My Appointments",
+    "notifications": "Notifications",
+    "profile":       "Profile & Settings",
+    "logout":        "Log out"
+  },
+  "auth": {
+    "login":           "Log in",
+    "logout":          "Log out",
+    "register":        "Register",
+    "email":           "Email address",
+    "password":        "Password",
+    "confirmPassword": "Confirm password",
+    "fullName":        "Full name",
+    "phone":           "Phone number",
+    "location":        "Location / Nearest district",
+    "loginCta":        "Sign in to your account",
+    "registerCta":     "Create a patient account",
+    "noAccount":       "Don't have an account?",
+    "haveAccount":     "Already have an account?",
+    "forgotPassword":  "Forgot password?"
+  },
+  "dashboard": {
+    "districtOverview":  "District Overview",
+    "totalHospitals":    "Total Facilities",
+    "avgStockHealth":    "Avg. Stock Health",
+    "avgBedOccupancy":   "Avg. Bed Occupancy",
+    "doctorsPresent":    "Doctors Present Today",
+    "lastUpdated":       "Last updated",
+    "liveData":          "Live data",
+    "aiInsights":        "AI Insights",
+    "aiInsightsDesc":    "AI-generated analysis of district-wide health facility performance",
+    "filterAll":         "All",
+    "filterUrban":       "Urban",
+    "filterRural":       "Rural",
+    "filterPHC":         "PHC",
+    "filterCHC":         "CHC",
+    "filterUnderperforming": "Underperforming",
+    "filterCritical":    "Critical",
+    "mapView":           "Map view",
+    "listView":          "List view"
+  },
+  "status": {
+    "available":    "Available",
+    "warning":      "Low",
+    "critical":     "Critical",
+    "present":      "Present",
+    "absent":       "Absent",
+    "operational":  "Operational",
+    "unavailable":  "Unavailable"
+  },
+  "beds": {
+    "title":        "Bed Occupancy",
+    "general":      "General Ward",
+    "semiWard":     "Semi Ward",
+    "special":      "Special Ward",
+    "occupied":     "occupied",
+    "total":        "total",
+    "available":    "available"
+  },
+  "stock": {
+    "title":        "Medicine Stock",
+    "medicine":     "Medicine",
+    "current":      "Current",
+    "ordered":      "Ordered",
+    "dispensed":    "Dispensed",
+    "threshold":    "Threshold",
+    "trend":        "Trend",
+    "lowStock":     "Low stock items",
+    "addStock":     "Add stock",
+    "updateStock":  "Update stock"
+  },
+  "appointments": {
+    "title":            "Appointments",
+    "bookAppointment":  "Book Appointment",
+    "book":             "Book appointment",
+    "upcoming":         "Upcoming",
+    "past":             "Past",
+    "date":             "Date",
+    "time":             "Time",
+    "doctor":           "Doctor",
+    "hospital":         "Hospital",
+    "status":           "Status",
+    "confirmed":        "Confirmed",
+    "cancelled":        "Cancelled",
+    "completed":        "Completed",
+    "selectHospital":   "Select hospital",
+    "selectDoctor":     "Select doctor",
+    "selectSlot":       "Select time slot",
+    "confirm":          "Confirm booking"
+  },
+  "attendance": {
+    "title":       "Doctor Attendance",
+    "markPresent": "Mark present",
+    "markAbsent":  "Mark absent",
+    "today":       "Today",
+    "history":     "History"
+  },
+  "patient": {
+    "nearbyHospitals": "Hospitals near you",
+    "distance":        "Distance",
+    "bedsAvailable":   "Beds available",
+    "noBeds":          "No beds available",
+    "viewDetails":     "View details"
+  },
+  "profile": {
+    "title":           "Profile & Settings",
+    "editProfile":     "Edit profile",
+    "changePassword":  "Change password",
+    "language":        "Language",
+    "saveChanges":     "Save changes"
+  },
+  "notifications": {
+    "title":     "Notifications",
+    "markRead":  "Mark as read",
+    "markAll":   "Mark all read",
+    "noNew":     "No new notifications",
+    "types": {
+      "lowStock":         "Low stock alert",
+      "bedFull":          "Beds full",
+      "doctorAbsent":     "Doctor absent",
+      "appointmentReminder": "Appointment reminder"
+    }
+  },
+  "errors": {
+    "notFound":         "Page not found",
+    "notFoundDesc":     "The page you're looking for doesn't exist or has been moved.",
+    "offline":          "Unable to reach the server",
+    "offlineDesc":      "Check your connection or contact your system administrator.",
+    "backToDashboard":  "Back to dashboard",
+    "retry":            "Try again",
+    "noData":           "No data available",
+    "noDataDesc":       "There's nothing here yet."
+  },
+  "common": {
+    "loading":   "Loading…",
+    "search":    "Search",
+    "filter":    "Filter",
+    "sort":      "Sort",
+    "export":    "Export",
+    "cancel":    "Cancel",
+    "save":      "Save",
+    "edit":      "Edit",
+    "delete":    "Delete",
+    "view":      "View",
+    "back":      "Back",
+    "next":      "Next",
+    "previous":  "Previous",
+    "submit":    "Submit",
+    "close":     "Close",
+    "of":        "of",
+    "all":       "All",
+    "today":     "Today",
+    "yesterday": "Yesterday"
+  }
+}
