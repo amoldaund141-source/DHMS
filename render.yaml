@@ -12,7 +12,7 @@ services:
     rootDir: backend
     buildCommand: |
       pip install -r requirements.txt
-      pip install gunicorn psycopg2-binary dj-database-url
+      pip install gunicorn psycopg2-binary dj-database-url celery
       python manage.py collectstatic --noinput
       python manage.py migrate
     startCommand: gunicorn config.wsgi:application
