@@ -40,17 +40,4 @@ services:
       # Note: Celery/Redis are excluded in the free tier footprint.
       # The backend handles this gracefully via the try/except block in signals.py
 
-  - type: web
-    name: dhms-frontend
-    env: static
-    plan: free
-    buildCommand: npm ci && npm run build
-    publishPath: dist
-    envVars:
-      - key: VITE_API_BASE_URL
-        # We will manually set this to the backend's URL on Render
-        value: "https://dhms-backend.onrender.com/api"
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+
