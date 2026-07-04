@@ -14,7 +14,7 @@ import {
 export function useAiInsights(params = {}) {
   return useQuery({
     queryKey: ['ai-insights', params],
-    queryFn: () => aiApi.insights(params).then((r) => r.data),
+    queryFn: () => aiApi.insights(params).then((r) => Array.isArray(r.data) ? r.data : (r.data.insights || [])),
     staleTime: 1000 * 60 * 10, // AI responses are expensive — cache 10 min
   })
 }
@@ -23,7 +23,7 @@ export function useAiInsights(params = {}) {
 export function useAiForecast(params = {}) {
   return useQuery({
     queryKey: ['ai-forecast', params],
-    queryFn: () => aiApi.forecast(params).then((r) => r.data),
+    queryFn: () => aiApi.forecast(params).then((r) => Array.isArray(r.data) ? r.data : (r.data.forecast || [])),
     staleTime: 1000 * 60 * 10,
     enabled: !!(params.hospital_id),
   })
