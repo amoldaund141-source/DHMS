@@ -9,8 +9,6 @@ Every queryset is scoped by role:
 """
 import io
 from datetime import timedelta, datetime, date
-
-import pandas as pd
 from django.db import models
 from django.utils import timezone
 from django.db.models import Avg, Sum, Count
@@ -744,6 +742,7 @@ def import_stock_view(request):
     hospital = get_hospital_queryset(request).get(pk=hospital_id)
 
     try:
+        import pandas as pd
         df = pd.read_excel(io.BytesIO(file_obj.read()))
         imported = 0
         errors = []
@@ -787,6 +786,7 @@ def import_patients_view(request):
         return Response({"detail": "No file uploaded."}, status=400)
 
     try:
+        import pandas as pd
         df = pd.read_excel(io.BytesIO(file_obj.read()))
         imported = 0
         errors = []
