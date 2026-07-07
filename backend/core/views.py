@@ -11,7 +11,7 @@ import io
 from datetime import timedelta, datetime, date
 from django.db import models
 from django.utils import timezone
-from django.db.models import Avg, Sum, Count
+from django.db.models import Avg, Sum, Count, Max
 from rest_framework import generics, status, views
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, AllowAny
@@ -251,7 +251,8 @@ def district_stats_view(request):
 def footfall_trend_view(request):
     """GET /api/hospitals/footfall-trend?district_id= — 7-day footfall by PHC/CHC."""
     qs = get_hospital_queryset(request)
-    today = timezone.localdate()
+    latest_footfall = Footfall.objects.aggregate(Max('date'))['date__max']
+    today = latest_footfall if latest_footfall else timezone.localdate()
     result = []
 
     for i in range(6, -1, -1):
@@ -277,7 +278,8 @@ def footfall_trend_view(request):
 def bed_trend_view(request):
     """GET /api/hospitals/bed-trend?district_id= — 7-day avg bed occupancy."""
     qs = get_hospital_queryset(request)
-    today = timezone.localdate()
+    latest_footfall = Footfall.objects.aggregate(Max('date'))['date__max']
+    today = latest_footfall if latest_footfall else timezone.localdate()
     result = []
 
     for i in range(6, -1, -1):
