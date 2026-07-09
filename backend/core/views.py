@@ -230,7 +230,8 @@ def district_stats_view(request):
     avg_bed = round(sum(bed_occ_list) / len(bed_occ_list)) if bed_occ_list else 0
 
     # Doctors
-    today = timezone.localdate()
+    latest_attendance = Attendance.objects.aggregate(Max('date'))['date__max']
+    today = latest_attendance if latest_attendance else timezone.localdate()
     doctors_present = Attendance.objects.filter(
         doctor__hospital__in=qs, date=today, status="present"
     ).count()

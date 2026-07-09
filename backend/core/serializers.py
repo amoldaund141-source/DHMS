@@ -138,7 +138,9 @@ class DoctorSerializer(serializers.ModelSerializer):
         fields = ["id", "name", "specialization", "status", "checkIn"]
 
     def _today_record(self, obj):
-        today = timezone.localdate()
+        from django.db.models import Max
+        latest = Attendance.objects.aggregate(Max('date'))['date__max']
+        today = latest if latest else timezone.localdate()
         return obj.attendance.filter(date=today).first()
 
     def get_status(self, obj):
@@ -205,14 +207,18 @@ class HospitalListSerializer(serializers.ModelSerializer):
             return 0
 
     def get_doctorsPresent(self, obj):
-        today = timezone.localdate()
+        from django.db.models import Max
+        latest = Attendance.objects.aggregate(Max('date'))['date__max']
+        today = latest if latest else timezone.localdate()
         return obj.doctors.filter(attendance__date=today, attendance__status="present").count()
 
     def get_doctorsTotal(self, obj):
         return obj.doctors.count()
 
     def get_footfall(self, obj):
-        today = timezone.localdate()
+        from django.db.models import Max
+        latest = Footfall.objects.aggregate(Max('date'))['date__max']
+        today = latest if latest else timezone.localdate()
         record = obj.footfall.filter(date=today).first()
         return record.count if record else 0
 
