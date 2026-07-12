@@ -344,7 +344,8 @@ class AttendanceListView(generics.ListAPIView):
     def get_queryset(self):
         hospital_id = self.kwargs["hospital_id"]
         get_hospital_queryset(self.request).get(pk=hospital_id)
-        today = timezone.localdate()
+        latest_attendance = Attendance.objects.aggregate(Max('date'))['date__max']
+        today = latest_attendance if latest_attendance else timezone.localdate()
         return Attendance.objects.filter(
             doctor__hospital_id=hospital_id, date=today
         ).select_related("doctor")
@@ -355,7 +356,8 @@ class AttendanceListView(generics.ListAPIView):
 def attendance_history_view(request, hospital_id):
     """GET /api/hospitals/:id/attendance/history — 7-day history."""
     get_hospital_queryset(request).get(pk=hospital_id)
-    today = timezone.localdate()
+    latest_attendance = Attendance.objects.aggregate(Max('date'))['date__max']
+    today = latest_attendance if latest_attendance else timezone.localdate()
     result = []
 
     for i in range(6, -1, -1):
@@ -891,15 +893,18 @@ def ai_insights_view(request):
 
     # Doctors
     total_doctors = Doctor.objects.filter(hospital__district=district).count()
-    today = timezone.localdate()
+    latest_attendance = Attendance.objects.aggregate(Max('date'))['date__max']
+    today_doc = latest_attendance if latest_attendance else timezone.localdate()
     present_doctors = Attendance.objects.filter(
         doctor__hospital__district=district,
-        date=today,
+        date=today_doc,
         status="present",
     ).count()
 
     # Footfall
-    week_ago = today - timedelta(days=7)
+    latest_footfall = Footfall.objects.aggregate(Max('date'))['date__max']
+    today_footfall = latest_footfall if latest_footfall else timezone.localdate()
+    week_ago = today_footfall - timedelta(days=7)
     footfall_week = Footfall.objects.filter(
         hospital__district=district, date__gte=week_ago
     ).aggregate(total=Sum("count"))["total"] or 0
