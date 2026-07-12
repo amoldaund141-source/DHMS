@@ -116,8 +116,8 @@ function FlaggedRow({ flag, index, onResolve }) {
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
             <StatusPill variant={flag.severity} label={flag.severity === 'critical' ? 'Critical' : 'Warning'} />
-            <Link to={`/admin/hospital/${flag.hospitalId}`} className="font-body font-semibold text-sm text-ink hover:text-primary transition-colors">
-              {flag.hospital}
+            <Link to={`/admin/hospital/${flag.hospital?.id}`} className="font-body font-semibold text-sm text-ink hover:text-primary transition-colors">
+              {flag.hospital?.name}
             </Link>
           </div>
           <p className="font-body text-xs text-body/70 leading-relaxed">{flag.reason}</p>
